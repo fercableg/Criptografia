@@ -14,7 +14,7 @@ INTERVAL      = 1.0      # igual que ping
 def build_payload_bsd():
     p = bytearray(PAYLOAD_LEN)
     p[1] = 0x60                      # segundo byte 0x60
-    for i in range(6):               # bytes 2..7 = 0x00 (ya están en cero)
+    for i in range(6):               # bytes 2..7 = 0x00 (ya están en cero).
         p[2+i] = 0x00
     # bytes 8..47 = 0x10..0x37
     for i, val in enumerate(range(0x10, 0x38)):  # 0x38 es exclusivo
